@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Smythe", serif;
+  color: #8b8b8b;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+main {
+  width: 600px;
+  position: relative;
+}
+#overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+header {
+  position: relative;
+  color: #ffffff;
+  height: 175px;
+  overflow: hidden;
+  background-image: url("https://s3-alpha-sig.figma.com/img/8453/64ec/acaeaea44c5e3a8cd7159c5d52f26662?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oeXsXd34qKb-I8czwPZbDqfpCTLXmWXjYPY4mealWRWN82ZG6z-ffcBr19c0bvOigJBYb7PFDG6n2WD95OvNC~HUQka7iZdaTkdFxTBPnlLRdEoVsV2cw~Foz8gjwAH~4cTvzkwiSLMWd~xQSZh5Oy~y-8WsdFle7kALrxMU0PEZQCyhP56e1kusNIqNtIwzl395ww7LU~1AUSFYoOrzH3UDBgJ8PrZo4LjkRWnz5bS-U8a6TDVxyBnoNdRoG61fmTJY88uZLJ8ztxUn9PSHr6xlyiPc2pTjweCVMxpjKq~CBwD0i8pcQ8vWDlJO6YkPwIxGqrfP7j2uSyp1m44QPg__");
+  background-repeat: no-repeat;
+  background-position: 70% 65%;
+}
+h1 {
+  font-size: 2.4375rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 46px;
+}
+h2 {
+  color: #000000;
+  font-size: 1.75rem;
+  line-height: 16.8px;
+  margin-block: 8.8px 8px;
+}
+h3 {
+  font-size: 1.5rem;
+  margin-block: 47px;
+  text-align: center;
+  color: #000000;
+}
+h4 {
+  font-size: 2rem;
+  color: #065f46;
+  text-align: center;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.food-order-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  margin-bottom: 0.5rem;
+}
+.each-food-order-item {
+  display: flex;
+  justify-content: space-between;
+}
+.food-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d2d2d2;
+  padding-block: 51px;
+}
+.food-item-left {
+  display: flex;
+  /* justify-content: left; */
+  align-items: center;
+  gap: 31px;
+}
+.food-icon {
+  font-size: 4.92rem;
+  /* align-self: left; */
+}
+.price {
+  font-size: 1.25rem;
+  color: #3c3c3c;
+}
+.add-btn {
+  border-radius: 50%;
+  border: 1.5px solid #dedede;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  color: #3c3c3c;
+  font-size: 2rem;
+}
+.add-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.quantity {
+  color: #000000;
+}
+.remove-btn {
+  border: none;
+  background-color: #ffffff;
+  color: #bbbbbb;
+  font-size: 0.75rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.remove-btn:hover {
+  color: #16db99;
+  font-weight: bold;
+}
+.food-order-left {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.food-order-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.your-order-title {
+  text-align: center;
+  margin-block: 45px 64px;
+}
+.complete-order-btn {
+  background-color: #16db99;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 18px;
+  border-radius: 3px;
+  box-shadow: 0 1 2 #000000;
+  width: 100%;
+  border: none;
+}
+.food-order-total-price {
+  border-top: 2px solid #393333;
+  margin-top: 31px;
+  padding-block: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+form {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  border-radius: 3.89px;
+  position: absolute;
+  top: 18.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 1rem;
+  z-index: 2;
+}
+.pay-btn {
+  font-size: 1.25rem;
+  background-color: #16db99;
+  color: #ffffff;
+  border-radius: 3.89px;
+  padding-block: 15px;
+  margin-top: 23px;
+  border: none;
+}
+input {
+  padding-block: 15px;
+  border: 1.3px solid #757575;
+  padding-left: 27px;
+}
+
+.confirmation-note {
+  background-color: #ecfdf5;
+  padding: 51px;
+  border-radius: 3px;
+  margin-top: 2rem;
+}
+.hidden {
+  display: none;
+}

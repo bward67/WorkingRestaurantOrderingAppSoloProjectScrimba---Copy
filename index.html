@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Restaurant Ordering App</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <main>
+      <header>
+        <div class="logo">
+          <h1>Jimmy's Diner</h1>
+          <p>The best burgers and pizzas in town.</p>
+        </div>
+      </header>
+
+      <section class="container" id="food-item-container">
+        <!-- render items here -->
+      </section>
+
+      <section class="food-order container" id="your-order-container">
+        <!-- <h2 class="your-order-title hidden" id="">Your Order</h2> -->
+        <div id="food-order-item"></div>
+        <div id="food-order-total-price" class="hidden"></div>
+      </section>
+
+      <form class="container hidden" id="enter-card-details-container">
+        <h3>Enter card details</h3>
+
+        <label for="name"></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="card-number"></label>
+        <input
+          type="number"
+          id="card-number"
+          placeholder="Enter card number"
+          required
+          name="card-number"
+          min="16"
+        />
+
+        <label for="cvv"></label>
+        <input
+          type="text"
+          id="cvv"
+          name="cvv"
+          placeholder="Enter CVV"
+          required
+          pattern="[0-9]{3}"
+        />
+        <button class="pay-btn" id="pay-btn">Pay</button>
+      </form>
+
+      <section class="confirmation-note hidden" id="confirmation-note">
+        <!-- <h4>Thanks, James! Your order is on its way!</h4> -->
+      </section>
+    </main>
+  </body>
+  <script src="app.js" type="module"></script>
+</html>
