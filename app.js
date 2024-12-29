@@ -93,6 +93,8 @@ function handleRemove(itemId) {
 
   if (ordersArray.length < 1) {
     yourOrderContainer.classList.add("hidden");
+    //! Must reset here so that the user can choose an item again without refreshing
+    window.location.reload();
   }
 }
 
