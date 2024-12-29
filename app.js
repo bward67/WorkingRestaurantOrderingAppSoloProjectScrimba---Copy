@@ -12,6 +12,7 @@ const totalPriceContainer = document.getElementById("food-order-total-price");
 let ordersArray = [];
 let totalPrice = 0;
 let yourOrderHtml = "";
+let priceArray = [];
 
 //!   -------------  EVENT LISTENERS  ----------------
 document.addEventListener("click", function (e) {
@@ -102,7 +103,7 @@ function renderYourOrder() {
   ordersArray.forEach((item) => {
     const { name, price, uuid, quantity } = item;
     let subtotalPrice = item.price * item.quantity;
-    totalPrice += subtotalPrice; // we get 14 + 14 = 28 + 14 = 42
+    totalPrice = subtotalPrice; // we get 14 + 14 = 28 + 14 = 42
     orderItemsHtml += ` <div class="each-food-order-item">
               <div class="food-order-left">
                 <h2>${name}</h2>
@@ -111,12 +112,16 @@ function renderYourOrder() {
                
               </div>
               <p class="price">$${subtotalPrice}</p></div>`;
+
+    //console.log({ subtotalPrice, totalPrice });
   });
   const foodOrderItem = document.getElementById("food-order-item");
   foodOrderItem.innerHTML = orderItemsHtml;
 
-  console.log(ordersArray);
-  console.log(totalPrice);
+  totalPrice = ordersArray.reduce((total, currentItem) => {
+    return total + currentItem.price * currentItem.quantity;
+  }, 0);
+  //console.log(totalPrice);
 }
 
 function renderItems() {
