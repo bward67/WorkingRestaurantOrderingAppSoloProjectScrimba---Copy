@@ -23,6 +23,8 @@ document.addEventListener("click", function (e) {
     handleCompleteOrder();
   } else if (e.target.dataset.removebtn) {
     handleRemove(e.target.dataset.removebtn);
+  } else if (e.target.id === "close-card-details-btn") {
+    handleCloseCardDetailsBtn();
   }
 });
 
@@ -102,12 +104,17 @@ function handleRemove(itemId) {
   if (ordersArray.length < 1) {
     yourOrderContainer.classList.add("hidden");
     //! Must reset here so that the user can choose an item again without refreshing - try an if else statement?
-    console.log(ordersArray);
+    //console.log(ordersArray);
 
     window.location.href =
       "https://restaurant-ordering-app-solo-project.netlify.app/";
     // window.location.reload();
   }
+}
+
+function handleCloseCardDetailsBtn() {
+  overlay.style.display = "none";
+  enterCardDetailsContainer.classList.add("hidden");
 }
 
 //!   -------------  OTHER FUNCTIONS  ----------------

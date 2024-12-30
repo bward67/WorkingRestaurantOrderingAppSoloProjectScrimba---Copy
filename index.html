@@ -34,7 +34,10 @@
       </section>
 
       <form class="container hidden" id="enter-card-details-container">
-        <h3>Enter card details</h3>
+        <div class="card-details-header">
+          <p id="close-card-details-btn">X</p>
+          <h3>Enter card details</h3>
+        </div>
 
         <label for="name"></label>
         <input
@@ -49,7 +52,7 @@
         <input
           type="number"
           id="card-number"
-          placeholder="Enter card number"
+          placeholder="Enter your 16 digit card number"
           required
           name="card-number"
           min="16"
@@ -60,7 +63,7 @@
           type="text"
           id="cvv"
           name="cvv"
-          placeholder="Enter CVV"
+          placeholder="Enter your 3 digit CVV"
           required
           pattern="[0-9]{3}"
         />
