@@ -12,7 +12,6 @@ const totalPriceContainer = document.getElementById("food-order-total-price");
 let ordersArray = [];
 let totalPrice = 0;
 let yourOrderHtml = "";
-let priceArray = [];
 
 //!   -------------  EVENT LISTENERS  ----------------
 document.addEventListener("click", function (e) {
@@ -87,14 +86,27 @@ function handleCompleteOrder() {
 }
 
 function handleRemove(itemId) {
-  ordersArray = ordersArray.filter((item) => item.uuid !== itemId);
   renderOrdersArray();
   renderYourOrder();
+  //! must check the quantity and minus it by 1
+  ordersArray.forEach((item) => {
+    if (item.uuid === itemId) {
+      if (item.quantity >= 1) {
+        item.quantity--;
+      } else {
+        ordersArray = ordersArray.filter((item) => item.uuid !== itemId);
+      }
+    }
+  });
 
   if (ordersArray.length < 1) {
     yourOrderContainer.classList.add("hidden");
-    //! Must reset here so that the user can choose an item again without refreshing
-    window.location.reload();
+    //! Must reset here so that the user can choose an item again without refreshing - try an if else statement?
+    console.log(ordersArray);
+
+    window.location.href =
+      "https://restaurant-ordering-app-solo-project.netlify.app/";
+    // window.location.reload();
   }
 }
 
@@ -104,7 +116,7 @@ function renderYourOrder() {
   let orderItemsHtml = `<h2 class="your-order-title">Your Order</h2>`;
   ordersArray.forEach((item) => {
     const { name, price, uuid, quantity } = item;
-    let subtotalPrice = item.price * item.quantity;
+    let subtotalPrice = price * quantity;
     totalPrice = subtotalPrice; // we get 14 + 14 = 28 + 14 = 42
     orderItemsHtml += ` <div class="each-food-order-item">
               <div class="food-order-left">
