@@ -123,6 +123,7 @@ h4 {
   color: #bbbbbb;
   font-size: 0.75rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.5rem;
 }
 .remove-btn:hover {
   color: #16db99;

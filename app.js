@@ -91,7 +91,7 @@ function handleRemove(itemId) {
   //! must check the quantity and minus it by 1
   ordersArray.forEach((item) => {
     if (item.uuid === itemId) {
-      if (item.quantity >= 1) {
+      if (item.quantity > 1) {
         item.quantity--;
       } else {
         ordersArray = ordersArray.filter((item) => item.uuid !== itemId);
