@@ -34,10 +34,10 @@
       </section>
 
       <form class="container hidden" id="enter-card-details-container">
-        <div class="card-details-header">
-          <p id="close-card-details-btn">X</p>
-          <h3>Enter card details</h3>
-        </div>
+        <button class="close-card-details-btn" id="close-card-details-btn">
+          X
+        </button>
+        <h3>Enter card details</h3>
 
         <label for="name"></label>
         <input
@@ -51,6 +51,7 @@
         <label for="card-number"></label>
         <input
           type="number"
+          class="card-number"
           id="card-number"
           placeholder="Enter your 16 digit card number"
           required

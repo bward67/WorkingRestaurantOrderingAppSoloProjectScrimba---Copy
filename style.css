@@ -164,7 +164,7 @@ form {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 23px;
+  /* gap: 23px; */
   border-radius: 3.89px;
   position: absolute;
   top: 18.5rem;
@@ -174,9 +174,14 @@ form {
   padding: 1rem;
   z-index: 2;
 }
-.card-details-header p {
+.close-card-details-btn {
   text-align: right;
   padding: 1rem;
+  background-color: transparent;
+  border: none;
+}
+.card-number {
+  margin-block: 23px;
 }
 .pay-btn {
   font-size: 1.25rem;

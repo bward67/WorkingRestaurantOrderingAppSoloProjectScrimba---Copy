@@ -106,9 +106,8 @@ function handleRemove(itemId) {
     //! Must reset here so that the user can choose an item again without refreshing - try an if else statement?
     //console.log(ordersArray);
 
-    window.location.href =
-      "https://restaurant-ordering-app-solo-project.netlify.app/";
-    // window.location.reload();
+    //I don't like refreshing this way but I can't figure out how to do it any other way - YET!
+    window.location.reload();
   }
 }
 
