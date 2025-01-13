@@ -33,7 +33,8 @@ header {
   color: #ffffff;
   height: 175px;
   overflow: hidden;
-  background-image: url("https://s3-alpha-sig.figma.com/img/8453/64ec/acaeaea44c5e3a8cd7159c5d52f26662?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oeXsXd34qKb-I8czwPZbDqfpCTLXmWXjYPY4mealWRWN82ZG6z-ffcBr19c0bvOigJBYb7PFDG6n2WD95OvNC~HUQka7iZdaTkdFxTBPnlLRdEoVsV2cw~Foz8gjwAH~4cTvzkwiSLMWd~xQSZh5Oy~y-8WsdFle7kALrxMU0PEZQCyhP56e1kusNIqNtIwzl395ww7LU~1AUSFYoOrzH3UDBgJ8PrZo4LjkRWnz5bS-U8a6TDVxyBnoNdRoG61fmTJY88uZLJ8ztxUn9PSHr6xlyiPc2pTjweCVMxpjKq~CBwD0i8pcQ8vWDlJO6YkPwIxGqrfP7j2uSyp1m44QPg__");
+  background-image: url(images/heroImage.png);
+  /* background-image: url("https://s3-alpha-sig.figma.com/img/8453/64ec/acaeaea44c5e3a8cd7159c5d52f26662?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oeXsXd34qKb-I8czwPZbDqfpCTLXmWXjYPY4mealWRWN82ZG6z-ffcBr19c0bvOigJBYb7PFDG6n2WD95OvNC~HUQka7iZdaTkdFxTBPnlLRdEoVsV2cw~Foz8gjwAH~4cTvzkwiSLMWd~xQSZh5Oy~y-8WsdFle7kALrxMU0PEZQCyhP56e1kusNIqNtIwzl395ww7LU~1AUSFYoOrzH3UDBgJ8PrZo4LjkRWnz5bS-U8a6TDVxyBnoNdRoG61fmTJY88uZLJ8ztxUn9PSHr6xlyiPc2pTjweCVMxpjKq~CBwD0i8pcQ8vWDlJO6YkPwIxGqrfP7j2uSyp1m44QPg__"); */
   background-repeat: no-repeat;
   background-position: 70% 65%;
 }
