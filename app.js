@@ -88,7 +88,6 @@ function handleCompleteOrder() {
 }
 
 function handleRemove(itemId) {
-  renderOrdersArray();
   renderYourOrder();
   //! must check the quantity and minus it by 1
   ordersArray.forEach((item) => {
@@ -109,6 +108,7 @@ function handleRemove(itemId) {
     //I don't like refreshing this way but I can't figure out how to do it any other way - YET!
     window.location.reload();
   }
+  renderOrdersArray();
 }
 
 function handleCloseCardDetailsBtn() {
